@@ -10,6 +10,13 @@
             <p>{{ $project->description }}</p>
             <p>Slug: {{ $project->slug }}</p>
         </div>
+        <div>
+        @if($project->type)
+        <p><strong>Type:</strong> {{ $project->type->name }}</p>
+    @else
+        <p><strong>Type:</strong>Non disponibile</p>
+    @endif
+</div>
     </div>
 </div>
 @endsection
